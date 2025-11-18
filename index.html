@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wave Studio — Animated Gradient UI</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated gradient waves -->
+  <div class="wave-bg" aria-hidden="true">
+    <div class="wave wave-1"></div>
+    <div class="wave wave-2"></div>
+    <div class="wave wave-3"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">Wave<span class="dot">•</span>Studio</div>
+      </div>
+
+      <nav class="nav" id="nav">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <input type="search" placeholder="Search..." class="search" id="search" aria-label="Search" />
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+        <button id="menuBtn" class="icon-btn menu-btn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <button id="closeMenu" class="close-drawer" aria-label="Close menu">✕</button>
+      <nav class="mobile-nav">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#work" class="mobile-link">Work</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1 class="title">Beautiful interfaces. <span class="accent">Fluid motion.</span></h1>
+          <p class="lead">Animated gradients and subtle motion to make your product feel alive. Performance-first, accessible, and responsive.</p>
+          <div class="cta-row">
+            <a href="#services" class="btn primary">Get Started</a>
+            <a href="#work" class="btn ghost">See Work</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="device-mock">
+            <div class="mock-screen">
+              <div class="mock-wave"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Design Systems</h3>
+            <p>Scalable UI libraries that keep your product consistent and delightful.</p>
+            <a class="card-link" href="#work">Learn more →</a>
+          </article>
+
+          <article class="card">
+            <h3>Motion UX</h3>
+            <p>Micro-interactions & motion that guide users and increase conversion.</p>
+            <a class="card-link" href="#work">Learn more →</a>
+          </article>
+
+          <article class="card">
+            <h3>Frontend Engineering</h3>
+            <p>High-performance, accessible frontends built with best practices.</p>
+            <a class="card-link" href="#work">Learn more →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section muted">
+      <div class="container">
+        <h2 class="section-title">Selected Work</h2>
+        <div class="work-grid">
+          <div class="work-item">Product Landing • FinTech</div>
+          <div class="work-item">Enterprise Dashboard • Analytics</div>
+          <div class="work-item">Mobile App • Health</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="muted-text">Let's talk about your project — tell us a little about it.</p>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent (simulated).');">
+          <div class="form-row">
+            <input required type="text" placeholder="Your name" />
+            <input required type="email" placeholder="Email" />
+          </div>
+          <textarea required placeholder="Message" rows="5"></textarea>
+          <div class="form-row">
+            <button class="btn primary" type="submit">Send message</button>
+            <button class="btn ghost" type="button" onclick="document.querySelector('.contact-form').reset()">Reset</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Wave Studio</div>
+      <div class="social muted-text">Built with ❤️ — <a href="#" class="link">Privacy</a></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
